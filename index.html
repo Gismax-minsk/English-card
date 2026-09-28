@@ -97,13 +97,22 @@
   .card-face.back .badge { background: #e2daff; color: #5a4bb8; }
 
   .word {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.25;
-    color: #221d3a;
-    overflow-wrap: anywhere;
-    max-height: 100%;
-    overflow-y: auto;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #221d3a;
+  overflow-wrap: anywhere;
+  max-height: 100%;
+  overflow-y: auto;
+  
+  /* Скрываем полосу прокрутки */
+  scrollbar-width: none;       /* Для Firefox */
+  -ms-overflow-style: none;    /* Для старых Edge/IE */
+  }
+
+  /* Скрываем полосу прокрутки в Chrome, Safari и на мобильных */
+  .word::-webkit-scrollbar {
+  display: none;
   }
   .card-face.back .word { color: #3d2f8f; }
 
